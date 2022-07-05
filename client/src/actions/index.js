@@ -63,7 +63,7 @@ export const deletePokemon = (id) => {
     await axios.delete(`/api/pokemons/${id}`)
   }
 }
-/* FILTERS & SORT // */
+/* FILTERS & SORT / */
 export const searchPokemon = (search) => {
   return {
     type: 'SEARCH_POKEMON',
