@@ -1,0 +1,20 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "extends": "./node_modules/standard/eslintrc.json",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["src", "node_modules"]
+      }
+    }
+  },
+  "rules": {
+     "no-underscore-dangle": 0,
+     "no-param-reassign": 0,
+     "import/no-unresolved": 0
+   }
+}

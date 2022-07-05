@@ -1,0 +1,131 @@
+/* body{
+  margin:0;
+    padding:0;
+    overflow-y:hidden;
+} */
+.red {
+  background-color: #f00;
+}
+.yellow {
+  background-color: #fecb65;
+}
+.green {
+  background-color: #32cb65;
+}
+.blue {
+  background-color: #3298cb;
+}
+.light-blue {
+  background-color: #85bdfe;
+}
+.light-red {
+  background-color: #fe98cb;
+}
+.light-yellow {
+  background-color: #fefecb;
+}
+.light-green {
+  background-color: #98fe00;
+}
+.left-panel {
+  position: absolute;
+  bottom: 60rem;
+  left: 10.5vh;
+  transform: translateY(150%);
+  background-color: #fe0065;
+  margin-left: 10%;
+  width: 20%;
+  height: 40vh;
+  display: grid;
+  border: solid black 3px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 7px;
+}
+.screenContainer{
+  position: absolute;
+  top:25%;
+  border-radius: 20px;
+  margin-left: 5%;
+  width: 90%;
+  height: 70%;
+  background-color: #c5bebe;
+}
+.greenScreen{
+  background-color: #344914;
+  position: absolute;
+  width:90%;
+  border-radius: 20px;
+  height:90%;
+  margin-left:5%;
+  top:5%;
+}
+.pokeImg{
+  width:50%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  height:90%;
+  
+}
+.lights-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1%;
+  transform: translateY(-160%);
+}
+.big-light-boarder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  height: 60px;
+  width: 60px;
+  border: solid black;
+  border-radius: 50%;
+  background-color: white;
+}
+.big-light {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid black;
+}
+.big-dot {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 7px;
+  left: 10px;
+  border-radius: 50%;
+}
+.small-lights-container {
+  margin-left: 12%;
+  margin-top: 10px;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  align-self: start;
+  justify-content: space-around;
+}
+.small-light {
+  border: solid black;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 600px){
+  .left-panel{
+    display: none;
+  }
+}

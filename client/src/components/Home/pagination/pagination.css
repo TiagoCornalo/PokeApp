@@ -1,0 +1,53 @@
+
+
+.btn {
+  background-color: #faf8f8;
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  padding: 5px 15px;
+  box-shadow: -1px 3px 6px -1px rgba(0, 0, 0, 0.75);
+  margin: 10px 0px;
+  width: 20px;
+  height: 25px;
+  transition: 0.1s all ease-in-out;
+}
+
+
+.btn:hover {
+  background-color: #df49a6;
+  border: none;
+}
+
+.btn__active {
+  background-color: #df49a6;
+  border: none;
+  cursor: poinnter;
+  padding: 5px 15px;
+  box-shadow: -1px 3px 6px -1px rgba(0, 0, 0, 0.75);
+  margin: 10px 0px;
+}
+
+.btn__active button {
+  background-color: #df49a6;
+  border: nonne;
+  cursor: pointer;
+  padding: 5px 15px;
+  box-shadow: -1px 3px 6px -1px rgba(0, 0, 0, 0.75);
+  margin: 10px 0px;
+}
+
+@media only screen and (max-width: 600px){
+  .containerPage{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 55%;
+    width: 20%;
+  }
+  .btn {
+    width: 50px;
+    height: 35px;
+    font-size: 16px; 
+  }
+}

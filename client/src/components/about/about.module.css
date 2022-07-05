@@ -1,0 +1,107 @@
+.container{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.main{
+  margin-top: 5%;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+.main p{
+  margin-top: 1%;
+}
+.main h1{
+  text-align: center;
+  color: black;
+  font-weight: 800;
+}
+.linkedin{
+  display: flex;
+  justify-content: center;
+}
+.icons{
+ text-decoration: none;
+ font-size: 60px;
+ color: black;
+ transition: 300ms ease;
+}
+.icons:hover{
+  color: #0e5f8a;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.stack{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* STACK ICONS */
+.react{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.react:hover{
+  color:#00d9fe;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.redux{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.redux:hover{
+  color: #764bbd;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.css{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.css:hover{
+  color: #1573b6;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.node{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.node:hover{
+  color: #66a161;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.express{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.express:hover{
+  color: #ffffff;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.postgres{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.postgres:hover{
+  color: #326993;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+.sequelize{
+  font-size: 60px;
+  transition: 300ms ease;
+}
+.sequelize:hover{
+  color: #02afee;
+  transform: scale(1.2);
+  transition: 500ms;
+}
