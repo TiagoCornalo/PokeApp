@@ -30,7 +30,7 @@
 .left-panel {
   position: absolute;
   bottom: 60rem;
-  left: 10.5vh;
+  left: 6rem;
   transform: translateY(150%);
   background-color: #fe0065;
   margin-left: 10%;
@@ -124,8 +124,15 @@
   left: 3px;
   border-radius: 50%;
 }
-@media only screen and (max-width: 600px){
+@media (max-width: 600px){
   .left-panel{
     display: none;
+  }
+}
+/* medium screens desktop */
+@media (min-width: 601px) and (max-width: 1366px){
+  .left-panel{
+    bottom: 45rem;
+    left: 4.5rem;
   }
 }

@@ -44,7 +44,7 @@ export default function PokeDetail ({ match }) {
             </div>
               )
             : null}
-          <div className={Classes.topContainer} style={{ marginTop: '2.1%' }}>
+          <div className={Classes.topContainer} >
 
             <div className={Classes.topStats}>
               <img

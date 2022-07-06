@@ -78,3 +78,13 @@
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
 }
+@media (min-width: 601px) and (max-width: 1366px){
+  .search-container{
+    margin: 0px;
+  padding: 0px;
+  display: flex;
+  margin-left: 10%;
+  justify-content: center;
+  align-items: center;
+  }
+}

@@ -1,6 +1,6 @@
 const typesRouter = require('express').Router()
 const { getTypes } = require('../controllers/types')
 
-typesRouter.get('/api/types', getTypes)
+typesRouter.get('/types', getTypes)
 
 module.exports = typesRouter

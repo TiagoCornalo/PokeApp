@@ -38,6 +38,19 @@ body{
   flex-direction: column;
 }
 
+.refreshButton{
+  border: none;
+  background: none;
+}
+.refreshButton img {
+  cursor: pointer;
+  transition: 0.4s all ease-in-out;
+}
+
+.refreshButton img:hover {
+  transform: scale(1.1);
+  transform: rotate(360deg);
+}
 .filters {
   width: 50%;
   align-content: center;
@@ -84,4 +97,23 @@ body{
     grid-template-columns: repeat(1, 1fr);
     margin-left: 25%;
   }
+}
+@media (min-width: 601px) and (max-width: 1366px){
+  .filters{
+    width: 60%;
+    margin-left: 25%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .cardsContainer {
+    margin-left: 1em;
+    margin-top: 1em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 15%;
+  }
+  
 }

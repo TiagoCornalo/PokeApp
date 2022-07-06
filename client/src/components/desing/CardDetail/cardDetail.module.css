@@ -182,3 +182,16 @@
     flex-direction: row;
   }
 }
+@media (min-width: 601px) and (max-width: 1366px){
+  .card{
+    position: absolute;
+    top: -30%;
+  }
+  .topContainer{
+    margin-top: 10%;
+  }
+  .stats{
+    transform: translateY(-30%);
+    column-gap: 5%;
+  }
+}

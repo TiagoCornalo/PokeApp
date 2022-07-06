@@ -12,7 +12,7 @@ export const NOT_FOUND_CLEANUP = 'NOT_FOUND_CLEANUP'
 
 export const getPokemons = () => {
   return function (dispatch) {
-    fetch('/api/pokemons ')
+    fetch('http://localhost:3001/pokemons ')
       .then(response => response.json())
       .then(pokemons => {
         dispatch({
@@ -24,7 +24,7 @@ export const getPokemons = () => {
 }
 export const getSinglePokemon = (id) => {
   return function (dispatch) {
-    fetch(`/api/pokemons/${id}`)
+    fetch(`http://localhost:3001/pokemons/${id}`)
       .then(response => response.json())
       .then(pokemon => {
         dispatch({
@@ -37,7 +37,7 @@ export const getSinglePokemon = (id) => {
 
 export const getTypes = () => {
   return function (dispatch) {
-    fetch('/api/types')
+    fetch('http://localhost:3001/types')
       .then(response => response.json())
       .then(types => {
         dispatch({
@@ -50,7 +50,7 @@ export const getTypes = () => {
 
 export const postPokemon = (data) => {
   return async function (dispatch) {
-    await axios.post('/api/pokemons', data)
+    await axios.post('http://localhost:3001/pokemons', data)
       .then(dispatch({ type: ADD_POKEMON }))
       .then(() => {
         alert('Pokemon added')
@@ -60,7 +60,7 @@ export const postPokemon = (data) => {
 
 export const deletePokemon = (id) => {
   return async function () {
-    await axios.delete(`/api/pokemons/${id}`)
+    await axios.delete(`http://localhost:3001/pokemons/${id}`)
   }
 }
 /* FILTERS & SORT / */

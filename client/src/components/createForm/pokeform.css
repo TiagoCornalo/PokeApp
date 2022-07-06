@@ -292,3 +292,18 @@ text-align: right;
     border-right: 6px black solid;
  }
 }
+@media (min-width: 601px) and (max-width: 1366px){
+  .icons{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 5%;
+    left: 50%;
+    top: 15%;
+    transform: translateX(80%);
+  }
+  .form{
+    width: 45%;
+    
+  }
+}
