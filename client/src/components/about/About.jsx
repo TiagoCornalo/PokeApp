@@ -1,7 +1,7 @@
 import Nav from '../Home/navigation/Nav'
 // UNUSED ICONS FOR LATER INCORPORATION
-/* import { IconContext } from 'react-icons' */
-/* import { SiLinkedin, SiReact, SiRedux, SiCss3, SiNodedotjs, SiExpress, SiPostgresql, SiSequelize } from 'react-icons/si' */
+import { IconContext } from 'react-icons'
+import { SiLinkedin, SiReact, SiRedux, SiCss3, SiNodedotjs, SiExpress, SiPostgresql, SiSequelize } from 'react-icons/si'
 import Classes from './about.module.css'
 export default function About () {
   return (
@@ -15,7 +15,7 @@ export default function About () {
         <p>I made this proyect while studying at Henry´s bootcamp as my individual Proyect.</p>
         <p>It´s made from scratch by me, both Backend and Frontend.</p>
         <p>If you´re interested in my skills, we can get in touch via my LinkedIn bellow:</p>
-        {/* <div className={Classes.linkedin}>
+       <div className={Classes.linkedin}>
           <a
           rel="noreferrer"
           href='https://www.linkedin.com/in/tiago-cornalo/
@@ -26,9 +26,9 @@ export default function About () {
             <SiLinkedin />
             </IconContext.Provider>
           </a>
-        </div> */}
+        </div>
         <br />
-        {/* <h4>
+         <h4>
           Technologies used for this proyect:
         </h4>
         <div className={Classes.stack}>
@@ -67,7 +67,7 @@ export default function About () {
               <SiSequelize />
             </IconContext.Provider>
           </div>
-        </div> */}
+        </div>
         </div>
 
       </div>

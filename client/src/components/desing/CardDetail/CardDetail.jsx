@@ -1,29 +1,42 @@
 import { getSinglePokemon, deletePokemon } from '../../../actions'
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Swal from 'sweetalert2'
 import Classes from './cardDetail.module.css'
-import PropTypes from 'prop-types'
 import styleCard from '../colors/colors'
 import heart from '../../../assets/heart.gif'
 import Loader from '../Loader/Loader'
 import Scale from '../../../assets/scale.png'
 import Height from '../../../assets/tree.png'
 import Nav from '../../Home/navigation/Nav'
-export default function PokeDetail ({ match }) {
-  PokeDetail.propTypes = {
-    match: PropTypes.object
-  }
-  const { id } = match.params
-  const history = useHistory()
+export default function PokeDetail () {
+  const { id } = useParams()
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const pokemon = useSelector((state) => state.pokemonDetails)
   const [loading, setLoading] = useState(true)
 
   const handleDelete = () => {
-    dispatch(deletePokemon(id))
-    alert('Pokemon deleted')
-    history.push('/home')
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+        dispatch(deletePokemon(id))
+        navigate('/home')
+      }
+    })
   }
   useEffect(() => {
     dispatch(getSinglePokemon(id))

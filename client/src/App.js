@@ -1,19 +1,25 @@
 import './App.css'
 import Home from './components/Home/Home'
 import { Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import PokeCreate from './components/createForm/PokeCreate'
 import CardDetail from './components/desing/CardDetail/CardDetail'
 import LandingPage from './components/landingPage/LandingPage'
 import About from './components/about/About'
+import NotFound from './components/notFound/NotFound'
 function App () {
   return (
     <Fragment>
-      <Route exact path={'/'} component={LandingPage}/>
-      <Route exact path='/home' component={Home}/>
-      <Route exact path='/create'component={PokeCreate}/>
-      <Route exact path='/pokedex/:id'component={CardDetail} />
-      <Route exact path='/about' component={About}/>
+      <BrowserRouter>
+      <Routes>
+      <Route path='/' element={<LandingPage/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/create'element={<PokeCreate/>}/>
+      <Route path='/pokedex/:id'element={<CardDetail/>} />
+      <Route path='/about' element={<About/>}/>
+      <Route path='*' element={<NotFound/>}/>
+      </Routes>
+      </BrowserRouter>
     </Fragment>
   )
 }

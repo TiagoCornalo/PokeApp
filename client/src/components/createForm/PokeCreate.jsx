@@ -2,6 +2,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { validate } from './validate'
 import { postPokemon, getTypes, setImage } from '../../actions'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import x from '../../assets/cross.png'
 import Pokedex from './pokeDex/Pokedex'
 import './pokeform.css'
@@ -18,6 +19,7 @@ import Nav from '../Home/navigation/Nav'
 // array of types
 
 export default function PokeCreate () {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const types = useSelector(state => state.types)
   const [input, setInput] = useState({
@@ -65,7 +67,11 @@ export default function PokeCreate () {
 
   const handleSubmit = function (e) {
     e.preventDefault()
-    dispatch(postPokemon(input))
+    setErrors(validate(input))
+    if (!Object.keys(errors).length && input.name) {
+      dispatch(postPokemon(input))
+      navigate('/home')
+    }
     setInput({
       name: '',
       height: '',
@@ -225,7 +231,7 @@ export default function PokeCreate () {
               )
             })}
         </div>
-          <button type="submit" className='eightbit-btn'>Submit</button>
+                <button type="submit" className='eightbit-btn'>Submit</button>
       </form>
       </div>
       </div>

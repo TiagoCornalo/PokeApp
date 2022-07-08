@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Swal from 'sweetalert2'
 export const GET_POKEMONS = 'GET_POKEMONS'
 export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS'
 export const GET_TYPES = 'GET_TYPES'
@@ -53,8 +54,18 @@ export const postPokemon = (data) => {
     await axios.post('http://localhost:3001/pokemons', data)
       .then(dispatch({ type: ADD_POKEMON }))
       .then(() => {
-        alert('Pokemon added')
-      })
+        Swal.fire({
+          title: 'Success',
+          text: 'New Pokemon added',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
+      }, Swal.fire({
+        title: 'Oops...',
+        text: 'Something went wrong',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      }))
   }
 }
 
