@@ -8,5 +8,5 @@ pokemonRouter.get('/pokemons/:id', singlePokemon)
 pokemonRouter.post('/pokemons', postPokemon)
 
 pokemonRouter.delete('/pokemons/:id', deletePokemon)
-
+ 
 module.exports = pokemonRouter
